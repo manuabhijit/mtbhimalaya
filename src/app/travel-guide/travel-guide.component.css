@@ -1,0 +1,19 @@
+.travel_guide {
+    padding-bottom: 25px;
+}
+
+.travel_guide h2 {
+    padding-top: 25px;
+}
+
+.travel_guide p {
+    padding-left: 25px;
+}
+
+.travel_guide ul {
+    padding-left: 25px;
+}
+
+.travel_guide ul li{
+    padding-bottom: 5px;
+}

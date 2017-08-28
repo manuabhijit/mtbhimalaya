@@ -1,0 +1,9 @@
+
+#stage_message_1, #stage_message_2{
+  font-weight: bold;
+  display: none
+}
+
+.refresh{
+  width: 100%
+}

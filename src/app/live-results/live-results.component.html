@@ -1,0 +1,70 @@
+<!--Banner Area Start-->
+<div class="banner-area-physio list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title title-three text-center">
+                    <div class="title-border" style="padding-bottom:30px">
+                        <h1 style="color:#00c0ff">We believe that <span>the other person is on our side</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="breadcrumb three">
+                    <li><a>Home</a></li>
+                    <li>Live</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Banner Area-->
+<div class="contact-information-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center" >
+                    <div class="title-border">
+                        <h1>Live <span>Results</span></h1>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="col-sm-5">
+                  <select class="form-control" id="stage">
+                      <option *ngFor="let stage of stages" value="{{stage.STAGE}}">{{stage.Name}}</option>
+                  </select>
+                </div>
+                <div class="col-sm-5">
+                  <select class="form-control" id="category">
+                      <option *ngFor="let cat of category" value="{{cat.name}}">{{cat.name}}</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <button type="button" id="refresh" class="btn btn-info refresh">Refresh</button>
+                </div>
+            </div>
+            <div class="col-sm-12 table-responsive container" style="padding-top:20px">
+              <table class="table">
+                <tr>
+                  <th id="rank">Rank</th>
+                  <th>Jersey Number</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Penalty</th>
+                  <th>Difference</th>
+                  <th>Final Time</th>
+                  <th class="team_final">Team Time</th>
+                </tr>
+              </table>
+              <p id="stage_message_1" class="text-center">Stage not yet started.</p>
+              <p id="stage_message_2" class="text-center">No results available yet</p>
+            </div>
+        </div>
+    </div>
+</div>

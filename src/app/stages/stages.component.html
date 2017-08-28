@@ -1,0 +1,216 @@
+<!--Banner Area Start-->
+<div class="banner-area-stages list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title title-three text-center">
+                    <div class="title-border" style="padding-bottom:30px">
+                        <h1 style="color:#00c0ff">The 8 marvelous stages of <span>The Himalayan Epic</span></h1>
+                    </div>
+                    <p class="text-white"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="breadcrumb three">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Stages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Banner Area-->
+
+<!--Adventures Grid Start-->
+<div class="adventures-grid list">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="section-title text-center">
+                   <div class="title-border">
+                       <h1>Stage <span>Listing</span></h1>
+                   </div>
+                   <p></p>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-md-12" *ngFor="let stage of stages">
+               <div class="single-list-item">
+                   <div class="row">
+                       <div class="col-md-4 col-sm-5">
+                           <div class="adventure-img">
+                               <a><img src="assets/img/stages/thumb_{{stage.STAGE}}.jpg" alt="{{stage.Name}}"></a>
+                           </div>
+                       </div>
+                       <div class="col-md-8 col-sm-7 margin-left-list">
+                           <div class="adventure-list-container">
+                               <div class="adventure-list-text">
+                                   <h1><a>Stage {{stage.STAGE}} / {{stage.Name}}</a></h1>
+                                   <h2>{{stage.CompetitiveDistance}} KM<span class="light">/</span><span class="persons">of Competitive Distance</span></h2>
+
+                                       <ul>
+                                           <i>
+                                               <li><span style="font-weight:bold;">{{stage.MaximumElevation}}meters</span> is the Maximum Elevation and will drop upto the Minimum of <span style="font-weight:bold;">{{stage.MinimumElevation}}meters</span>. The flag-off is scheduled from <span style="font-weight:bold;">{{stage.source}} </span>and marks its end in <span style="font-weight:bold;">{{stage.destination}} </span>.</li>
+                                           </i>
+                                       </ul>
+
+                                   <div class="list-buttons">
+                                       <a download="Stage_{{stage.STAGE}}.jpg" href="assets/img/stages/ev_b-{{stage.STAGE}}.jpg" title="Hero MTB Himalaya 2017 | Stage {{stage.STAGE}} / {{stage.Name}}" class="button-one button-blue">Download Route Map</a>
+                                   </div>
+                               </div>
+                               <div class="adventure-list-image">
+                                   <div class="image-top">
+                                       <img src="assets/img/icon/{{stage.level_icon}}.png" alt="">
+                                   </div>
+                                   <h2>{{stage.level_text}}</h2>
+                                   <ul class="image-bottom">
+                                       <li><img src="assets/img/icon/28.png" alt=""></li>
+                                       <li style="color: #8d8d8d; font-size:25px">{{stage.AverageTemperature}} &deg;C</li>
+                                       <li><img src="assets/img/icon/39.png" alt=""></li>
+                                       <li style="color: #8d8d8d; font-size:25px">{{stage.No_of_Feedstations}}</li>
+                                       <li><img src="assets/img/icon/37.png" alt=""></li>
+                                       <li style="color: #8d8d8d; font-size:25px">{{stage.No_of_Service_Points}}</li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+      </div>
+   </div>
+</div>
+<!--End of Adventures Grid-->
+
+<!--Newsletter Area Start-->
+<div class="welcome-himalaya">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title text-center">
+                    <div class="title-border">
+                        <h1 class="text-white">Welcome <span>To The Himalayas</span></h1>
+                    </div>
+                    <p class="text-white">With profound topographical features to the endorsement of different ecological systems, nature has equipped the Himalayas with vegetation ranging from the grasslands and coniferous forests at the higher altitudes to the tropical rainforests that are scattered at the lower elevations. <br>Being a home to the exotic species of animals like snow leopard and black bear to the many diverse and beautiful species of birds like brown rock chat and Himalayan bulbul, the habitat in the Himalayas is the only true reason that makes this place a perfect destination to ride. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Newsletter Area-->
+
+
+<!--Blog Area Start-->
+    <div class="blog-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <div class="title-border">
+                            <h1>Race <span>Cheat Sheet</span></h1>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Competitive Distance</th>
+                        <th>Elevation Gain</th>
+                        <th class="hidden-sm hidden-xs">Maximum Elevation</th>
+                        <th class="hidden-sm hidden-xs">Minimum Elevation</th>
+                        <th>Feed Stations</th>
+                        <th>Service Points</th>
+                        <th class="hidden-xs">Average Temperature</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let stage of stages">
+                        <td>{{stage.STAGE}}.</td>
+                        <td>{{stage.Name}}</td>
+                        <td>{{stage.CompetitiveDistance}} meters</td>
+                        <td>{{stage.ElevationGain}} meters</td>
+                        <td class="hidden-sm hidden-xs">{{stage.MaximumElevation}} meters</td>
+                        <td class="hidden-sm hidden-xs">{{stage.MinimumElevation}} meters</td>
+                        <td>{{stage.No_of_Feedstations}}</td>
+                        <td>{{stage.No_of_Service_Points}}</td>
+                        <td class="hidden-xs">{{stage.AverageTemperature}}&deg;C</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!--End of Blog Area-->
+
+
+<!--Team Area Start-->
+    <div class="team-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <div class="title-border">
+                            <h1>Expore <span>The Himalayas</span></h1>
+                        </div>
+                        <p>
+                            With 8 days of riding and equal nights of delight, this 13th version of Hero MTB Himalayas would bestow riders to explore the unabridged Himachal Pradesh state of India starting from the “queen of hills” Shimla to the “Valley of Gods” Kullu followed by the “Himalayan Pyramid” Kangra and finally concluding to the “land of his holiness” Dharamshala with delicious Himalayan cuisine and amazing people along the way. To what one calls amusement, to what other says recreation, this journey would be full of adventure to explore the potential within you, be it mind or be it body. From highest elevation point of race, Jalori pass (3120 m) to the mighty rivers of Sutlej and Beas, this 580 km journey is going to test every sense in you with their entire wilderness and eventually would reward you with all their beauty. So, come prepared and plan your strategy because Himalayas are calling you and now is the time to conquer the same.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="blog-carousel hidden-md hidden-sm hidden-xs" >
+                    <div class="col-lg-12">
+                        <div class="single-blog hover-effect">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="blog-image box-hover">
+                                        <a><img src="assets/img/blog/route.jpg" alt="MTB Himalaya Race Route"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 margin-left">
+                                    <div class="blog-text">
+                                        <h4><a href="blog-details.html">Did you know about the race route?</a></h4>
+                                        <p>
+                                            HERO MTB HIMALAYA offers a very balanced route with the right mix of difficulty and natural beauty. The Himalayas are not an easy place to be. The altitude combined with the rugged nature of the trails is a difficult challenge for even the most seasoned riders. The temperature varies from -5° Celsius to 30° Celsius, while the trails vary from single track to broken tarmac climbs. It’s all there! The race each day sees riders climb very hard. The average elevation gain each day is well in excess of 2000 Vertical Height Meters and at this altitude it’s all set to test every muscle in your body. The maximum elevation of the race is 3,100 m (10,200ft) above sea level, while the lowest is 700 m (2,290 ft). The temperatures and oxygen levels will also vary according to the altitude. The HERO MTB HIMALAYA boasts of one of the highest elevation gain for a stage race. A whopping 16,000 m (52,500 ft) plus to be climbed in 8 days! That is more than Cape Epic, Trans Rockies, La Ruta and most of the other races across the world. Get those climbing shoes ready.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" style="padding-top:40px">
+                        <div class="single-blog hover-effect">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="blog-image box-hover">
+                                        <a><img src="assets/img/blog/terrain.jpg" alt="MTB Himalaya Race Route Terrain"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 margin-left">
+                                    <div class="blog-text">
+                                        <h4><a>Did you know about the route terrain?</a></h4>
+                                        <p>
+                                            Most of the race is on open tracks with no or absolutely minimal traffic. You can expect a marshal in every 3-5 km of the race route. Any areas of heavy traffic are avoided and if unavoidable are heavily manned by our marshals and the local authorities to ensure a smooth passage of the riders. The riders must possess previous mountain biking experience as some sections will demand more than just physical endurance. 99.99% of the race is rideable and there are very few hiking sections. Mud trails, tall pines, starry nights and mountain bikes! As the name of the race suggests - Mountain Biking in the Himalayas. Surfaces will also vary from day to day. In terms of what you will see, the race has a plethora to offer. Rice fields, gushing rivers, quaint streams, pine forests, Himalayan peaks, heavenly villages, fairytale meadows and even some wild animals! The race is set in some pristine parts of the Himalayas, which remain aloof from the modern world. Its a different world out here! It’s the adventure of a lifetime.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!--End of Team Area-->

@@ -1,0 +1,28 @@
+<!--Team Area Start-->
+<div class="team-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <div class="title-border">
+                        <h1>Our <span>Sponsors</span></h1>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6" *ngFor="let company of sponsor_list">
+                <div class="single-member">
+                    <div class="team-image">
+                        <a target="_blank" href="{{company.website}}"><img style="padding-bottom: 72px;" src="assets/img/sponsors/{{company.logo}}" alt="{{company.name}}"></a>
+                        <div class="member-text effect-bottom">
+                            <h4><a>{{company.name}} <span class="hidden-xs">|</span> <span class="hidden-xs">{{company.type}}</span></a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Team Area-->

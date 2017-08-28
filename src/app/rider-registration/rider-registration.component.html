@@ -1,0 +1,251 @@
+<!--Banner Area Start-->
+        <div class="banner-area-rider-reg list">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title title-three text-center">
+                            <div class="title-border" style="padding-bottom:90px">
+                                <h1 style="color:#00c0ff">Rider Registration <span>Portal</span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="breadcrumb three">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--End of Banner Area-->
+
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value,userForm.valid)">
+        <div class="col-sm-12 well">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label>Linked Email Address</label>
+                    <input type="email" name="email" placeholder="" class="form-control" required [(ngModel)]="email" disabled required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label>UID [For office Purpose]</label>
+                    <input type="text" name="uid" class="form-control" [(ngModel)]="database.uid" disabled>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label>Riding Category*</label>
+                    <div class="form-group">
+                        <select class="form-control" name="riding_catagory" [(ngModel)]="database.riding_catagory" required>
+                            <option value="Open Men Solo">Open Men Solo</option>
+                            <option value="Open Women Solo">Open Women Solo</option>
+                            <option value="Open Masters Solo">Open Masters Solo</option>
+                            <option value="Grand Masters Solo">Grand Masters Solo</option>
+                            <option value="Team of Two">Team of Two</option>
+                            <option value="Tripper">Supporter/ Tripper</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<div class="col-lg-12 well">
+        	<div class="row">
+        			<div class="col-sm-12">
+        				<div class="row">
+        		    		<div class="col-sm-6 form-group">
+        						<label>Full Name*</label>
+        						<input type="text" id="full_name" name="full_name" placeholder="Enter your first and second name." class="form-control" [(ngModel)]="database.full_name" pattern=".{3,}" required>
+        					</div>
+                            <div class="col-sm-6 form-group">
+        						<label>Date of Birth*</label>
+        						<input type="date" format="dd/mm/yyyy" id="date_of_birth" name="date_of_birth" placeholder="Enter your date of birth" class="form-control" [(ngModel)]="database.date_of_birth" required>
+        					</div>
+        				</div>
+        				<div class="form-group">
+        					<label>Address*</label>
+        					<textarea placeholder="Enter your permanent address here." rows="3" name="address_initials" class="form-control" [(ngModel)]="database.address_initials" required></textarea>
+        				</div>
+        				<div class="row">
+        					<div class="col-sm-4 form-group">
+            					<label>Landmark*</label>
+            					<input type="text" placeholder="Enter the landmark" name="address_landmak" class="form-control" [(ngModel)]="database.address_landmak" pattern=".{3,}" required>
+            				</div>
+            				<div class="col-sm-4 form-group">
+            					<label>State*</label>
+            					<input type="text" id="address_state" placeholder="Enter the name of state here" name="address_state" class="form-control" [(ngModel)]="database.address_state" pattern=".{3,}" required>
+            				</div>
+            				<div class="col-sm-4 form-group">
+            					<label>Zip*</label>
+            					<input type="text" placeholder="Enter zipcode here" pattern=".{4,10}" maxlength="10" name="address_zipcode" class="form-control" [(ngModel)]="database.address_zipcode" required>
+            				</div>
+        		    	</div>
+            			<div class="row">
+            			    <div class="col-sm-6 form-group">
+            					<label>Country*</label>
+                                <select class="form-control" name="address_country" [(ngModel)]="database.address_country" (change)="auto_nation()" required>
+                                    <option *ngFor="let country of all_countries" value="{{country}}">{{country}}</option>
+                                </select>
+            				</div>
+            				<div class="col-sm-6 form-group">
+            					<label>Nationality*</label>
+                                <select class="form-control" name="nationality" [(ngModel)]="database.nationality" required>
+                                    <option *ngFor="let country of all_countries" value="{{country}}">{{country}}</option>
+                                </select>
+            				</div>
+            			</div>
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                				<label>Occupation*</label>
+                				<input type="text" name="occupation" placeholder="Enter your occupation" maxlength="20" class="form-control" [(ngModel)]="database.occupation" required>
+                			</div>
+                			<div class="col-sm-4 form-group">
+                				<label>Contact Number*</label>
+                				<input type="text" name="contact_number" placeholder="Add your country code" maxlength="16" class="form-control" [(ngModel)]="database.contact_number" pattern=".{10,16}" required>
+                			</div>
+                			<div class="col-sm-4 form-group">
+                				<label>Alternate Contact Number</label>
+                				<input type="text" name="alt_contact_number" pattern=".{10,16}" maxlength="16" placeholder="Add your country code" class="form-control" [(ngModel)]="database.alt_contact_number">
+                			</div>
+                        </div>
+                        <div class="row">
+            			    <div class="col-sm-6 form-group">
+            					<label>Gender*</label>
+                                <div class="form-group">
+                                    <select class="form-control" name="gender" [(ngModel)]="database.gender" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+            				</div>
+                            <div class="col-sm-6 form-group">
+            					<label>Jersey Size*</label>
+                                <div class="form-group">
+                                    <select name="jersey_size" class="form-control" [(ngModel)]="database.jersey_size" required>
+                                        <option value="XS">Extra Small</option>
+                                        <option value="S">Small</option>
+                                        <option value="M">Medium</option>
+                                        <option value="L">Large</option>
+                                        <option value="XL">Extra Large</option>
+                                        <option value="XXL">Extra Extra Large</option>
+                                    </select>
+                                </div>
+            				</div>
+            			</div>
+        		    </div>
+    		</div>
+        </div>
+
+        <div class="col-lg-12 well">
+        	<div class="row">
+        			<div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-4 form-group">
+                                <label>Emergency Contact Person's Name*</label>
+                                <input type="text" id="emg_contact_name" name="emg_contact_name" placeholder="Person's name" pattern=".{3,20}" class="form-control" [(ngModel)]="database.emg_contact_name" required>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label>Emergency Contact Person's Contact Number*</label>
+                                <input type="text" id="emg_contact_number" pattern=".{3,16}" name="emg_contact_number" placeholder="Person's contact number" class="form-control" [(ngModel)]="database.emg_contact_number" required>
+                            </div>
+                            <div class="col-sm-4 form-group">
+                                <label>Emergency Contact Person's Relation*</label>
+                                <input type="text" id="emg_contact_relation" pattern=".{3,20}" name="emg_contact_relation" placeholder="(Eg: Father, Mother ... etc)" class="form-control" [(ngModel)]="database.emg_contact_relation" required>
+                            </div>
+                            <div class="col-sm-8 form-group">
+                				<label>Allergies and Medical Condition</label>
+                				<input type="text" placeholder="Leave blank if you are medically  fit" name="medical_condition" class="form-control" maxlength="50" [(ngModel)]="database.medical_condition">
+                			</div>
+                            <div class="col-sm-4 form-group">
+            					<label>Blood Group*</label>
+                                <div class="form-group">
+                                    <select name="blood_group" class="form-control" [(ngModel)]="database.blood_group" required>
+                                        <option value="A+">A+</option>
+                                        <option value="B+">B+</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="O+">O+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+            				</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 well">
+        	<div class="row">
+                <h2>Profile Card Details</h2>
+    			<div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-md-8 form-group">
+                            <label>Display Name*</label>
+                            <input type="text" name="display_name" pattern=".{3,25}" maxlength="25" placeholder="Name you want on your profile." class="form-control" [(ngModel)]="database.display_name" required>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label>Team Name</label>
+                            <input type="text" name="team_name" placeholder="Name of your team." class="form-control" [(ngModel)]="database.team_name" pattern=".{3,25}"  maxlength="25">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Riding Experience (in years)</label>
+                            <select name="riding_experience" class="form-control" [(ngModel)]="database.riding_experience" required>
+                                <option *ngFor="let year of year_range" value="{{year}}">{{year}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Previous participation in Hero MTB Himalayas?</label>
+                            <select name="previous_mtb_participation" class="form-control" [(ngModel)]="database.previous_mtb_participation" required>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 form-group">
+        					<label>Tell us more about yourself</label>
+        					<textarea placeholder="Do you have any story to share?" name="story" rows="3" name="story" class="form-control" [(ngModel)]="database.story"></textarea>
+        				</div>
+                        <div class="col-md-12 form-group">
+                            <div class="col-md-6">
+                                <label>Previous Participation</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <input type="text" name="personal_best_1" pattern=".{3,25}"  maxlength="50" placeholder="Your first personal best" class="form-control" [(ngModel)]="database.personal_best_1" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="personal_best_2" pattern=".{3,25}"  maxlength="50" placeholder="Your second personal best" class="form-control" [(ngModel)]="database.personal_best_2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label>Personal Favourite MTB Race*</label>
+                            <input type="text" pattern=".{3,25}"  maxlength="50" name="personal_favourite" placeholder="Your personal favourite MTB race" class="form-control" [(ngModel)]="database.personal_favourite" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Biking Style*</label>
+                            <input type="text" name="biking_style" pattern=".{3,25}"  maxlength="25" placeholder="Enter Your Biking Style" class="form-control" [(ngModel)]="database.biking_style" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Sponsor</label>
+                            <input type="text" name="major_sponsor" pattern=".{3,25}"  maxlength="25" placeholder="Sponsor" class="form-control" [(ngModel)]="database.major_sponsor">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label>Bike Specifications*</label>
+                            <input type="text" name="bike" pattern=".{5,}" placeholder="Enter name and model number" class="form-control" [(ngModel)]="database.bike" required>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label>Social Media Link*</label>
+                            <input type="text" name="social_media_link" pattern=".{5,}" placeholder="Your Facebook/Twitter Profile links" class="form-control" [(ngModel)]="database.social_media_link" required>
+                        </div>
+                        <div class="col-md-12 form-group" id="submit_button">
+                            <button type="submit" style="width:100%" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

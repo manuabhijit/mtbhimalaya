@@ -1,0 +1,59 @@
+<div class="back">
+    <!--Banner Area Start-->
+            <div class="banner-area-gallery list">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title title-three text-center">
+                                <div class="title-border" style="padding-bottom:30px">
+                                    <h1 style="color:#00c0ff">Looking back, we have a lot of <span>great memories</span></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="breadcrumb three">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Gallery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--End of Banner Area-->
+
+    <!--Service Area Start-->
+    <div class="service-area text-center" style="margin-top:15px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <div class="title-border">
+                            <h1>Photo <span> Gallery</span></h1>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Service Area-->
+
+    <div class="gallery" *ngFor='let year of [2016, 2015]' >
+        <div class="container cont">
+            <div class="row">
+                <div class="imgcontainer col-md-6" *ngFor='let key of [1,2]'>
+                  <img style="align:center" src="assets/img/gallery/container{{year}}/banner{{key}}.jpg" />
+                </div>
+                <div *ngFor='let key of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]' class="imgcontainer col-md-3 col-sm-6">
+                  <img src="assets/img/gallery/container{{year}}/{{key}}.jpg" />
+                </div>
+            </div>
+            <div class="gallery-footer">
+                <h1>Hero MTB Himalaya {{year}} : {{year-2004}}<sup>th</sup> Edition</h1>
+                <a target="_blank" href="https://www.flickr.com/photos/mbhimachal/albums/72157673874283760"><button type="button" name="button" style="width:100%" class="btn btn-info">See more on Flicker <i class="fa fa-flickr" aria-hidden="true" style="font-size:20px"></i></button></a>
+            </div>
+        </div>
+    </div>
+</div>
