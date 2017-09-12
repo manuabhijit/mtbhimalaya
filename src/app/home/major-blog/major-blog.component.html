@@ -1,25 +1,24 @@
-
 <!--Blog Area Start-->
 <div class="blog-area section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title text-center">
-                    <div class="title-border">
-                        <h1>See Who Is <span>Riding This Year</span></h1>
-                    </div>
-                    <p>Rider Profiles Launching Soon</p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title text-center">
+          <div class="title-border">
+            <h1>See Who Is <span>Riding This Year</span></h1>
+          </div>
+          <a routerLink="../profile" title="Rider Listing" class="button-one button-blue">Click To See Rider Listing.</a>
         </div>
-        <div class="col-md-12">
-            <div *ngFor="let rider of riders; let i = index;" [class.hidden]="riders[i].display_status!='1'" class="col-md-2" style="text-align:center;">
-                <a routerLink="{{rider.uid}}">
-                    <img src="assets\img\profile_pics\icon\{{rider.uid}}.jpg" height="65px" style="">
-                    <span class="profile_text">{{i}}{{rider.full_name}}</span>
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-12">
+      <div *ngFor="let rider of riders;" [class.hidden]="rider.display_status!='1'" class="col-md-2" style="text-align:center;">
+        <a routerLink="../profile/{{rider.uid}}">
+          <img src="assets\img\profile_pics\icon\{{rider.uid}}.jpg" height="65px" style="">
+          <p class="profile_text">{{rider.full_name}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 <!--End of Blog Area-->

@@ -1,11 +1,24 @@
 .profile_icon{
+
+}
+img{
+  transition: .3s transform;
+  transform: translateZ(0);
   border-radius: 5px;
   margin: 10px;
-
+}
+img:hover {
+  z-index: 1;
+  transform: scale(1.05,1.05);
+  transition: .5s transform;
 }
 
 .profile_text{
   text-align: center;
   display: inline-block;
   height: 30px;
+  color:black;
+  margin-top:5px;
+  text-transform: uppercase;
+
 }

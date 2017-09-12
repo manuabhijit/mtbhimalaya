@@ -14,7 +14,7 @@ export class RiderRegistrationComponent implements OnInit {
     public email;
     public database: any;
     year_range = [];
-
+    breadcrum="Register";
   constructor(private route: ActivatedRoute, private _exampleService: MyServiceClass,  private router: Router) {
         this.database=[];
         for(let i=2017; i>1960;i--){

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RulesAndRegulationsComponent implements OnInit {
 
+  breadcrum="Rules";
   constructor() { }
 
   ngOnInit() {

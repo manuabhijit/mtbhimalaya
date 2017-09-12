@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelGuideComponent implements OnInit {
 
+  breadcrum="Travel Guide";
   constructor() { }
 
   ngOnInit() {

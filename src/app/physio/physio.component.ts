@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./physio.component.css']
 })
 export class PhysioComponent implements OnInit {
-
+  breadcrum="Physio";
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,5 @@
 <!--Banner Area Start-->
-<div class="banner-area-travel list">
+<div class="banner-area-travel list hidden-sm hidden-xs">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -14,10 +14,20 @@
       <div class="col-md-12 text-center">
         <ul class="breadcrumb three">
           <li><a href="index.html">Home</a></li>
-          <li>Travel Guide</li>
+          <li>{{breadcrum}}</li>
         </ul>
       </div>
     </div>
+  </div>
+</div>
+<div class="hidden-md hidden-lg">
+  <div class="row mobile-breadcrum-container">
+      <div class="col-md-12 mobile-breadcrum-row">
+          <ul class="mobile-breadcrum">
+              <li><a href="index.html">Home</a></li>
+              <li>{{breadcrum}}</li>
+          </ul>
+      </div>
   </div>
 </div>
 <!--End of Banner Area-->

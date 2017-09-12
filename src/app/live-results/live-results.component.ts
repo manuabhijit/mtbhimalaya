@@ -10,6 +10,7 @@ import $ from 'jquery';
 })
 export class LiveResultsComponent implements OnInit {
 
+    breadcrum="Live";
   constructor(private _exampleService: MyServiceClass) { }
     stages = [
         {

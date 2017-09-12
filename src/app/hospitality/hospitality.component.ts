@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HospitalityComponent implements OnInit {
 
   constructor() { }
-
+  breadcrum="Hospitality";
   ngOnInit() {
   }
 

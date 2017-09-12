@@ -14,6 +14,7 @@ export class ChatToRegisterComponent implements OnInit {
     public applicant : string;
     email : string;
     categorie: string;
+    breadcrum="Registration"
 
   constructor(private _exampleService: MyServiceClass, private router: Router){}
 

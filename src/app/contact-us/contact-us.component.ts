@@ -16,7 +16,8 @@ export class ContactUsComponent implements OnInit {
   count=0
   details=[{'firstname':''},{'firstname':''}];
   msg='';
-  
+  breadcrum="Contact Us";
+
   onSubmit(value: any){
       console.log(value.f_name);
       this.details[this.count]['firstname']=value.f_name;
