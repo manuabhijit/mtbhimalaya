@@ -1,0 +1,16 @@
+.table{
+  text-align: left;
+  margin-bottom: 100px;
+}
+
+.table tr td {
+  vertical-align: middle;
+}
+
+
+.profile_icon{
+  border-radius: 5px;
+  width: 45px;
+  margin-right: 10px;
+
+}

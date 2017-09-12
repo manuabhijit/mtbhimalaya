@@ -1,0 +1,11 @@
+.profile_icon{
+  border-radius: 5px;
+  margin: 10px;
+
+}
+
+.profile_text{
+  text-align: center;
+  display: inline-block;
+  height: 30px;
+}

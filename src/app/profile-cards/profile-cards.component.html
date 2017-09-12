@@ -1,16 +1,81 @@
 
+<!--Banner Area Start-->
+<div class="banner-area-profile list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title title-three text-center">
+                    <div class="title-border" style="padding-bottom:30px">
+                        <h1 style="color:#00c0ff">Catch the action, <span>Live</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="breadcrumb three">
+                    <li><a>Home</a></li>
+                    <li>Profile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Banner Area-->
 
 
-<div class="card">
-  <img src="img.jpg" alt="John" style="width:100%">
-  <div class="container">
-    <h1>John Doe</h1>
-    <p class="title">CEO & Founder, Example</p>
-    <p>Harvard University</p>
-    <a href="#"><i class="fa fa-dribbble"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <p><button>Contact</button></p>
+<div class="contact-information-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center" >
+                    <div class="title-border">
+                        <h1>Rider <span>Profile</span></h1>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-5">
+
+        <div class="containerProfile">
+          <img class="imgA1" src="assets\img\profile_pics\full\template.png">
+          <img class="imgB1" src="assets\img\profile_pics\full\{{database.uid}}.jpg">
+          <div class="imgC1text">
+            <h3 class="name">{{database.display_name}}</h3>
+            <h4 class="cat">{{database.nationality}}  |  {{database.riding_catagory}}</h4>
+          </div>
+          <div class="imgDtext">
+            <h4 class="img_personal_favourite" id="img_personal_favourite"><b>Personal Favourite :</b>  {{database.personal_favourite}}</h4>
+            <h4 class="img_riding_experience" id="img_riding_experience"><b>Riding Experience :</b>  {{2017-database.riding_experience}} years</h4>
+            <h4 class="img_personal_best_1" id="img_personal_best_1"><b>Personal Best: :</b>  {{database.personal_best_1}}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5 rider_profile_data">
+        <h3><b>{{database.display_name}}</b> /<span> {{database.nationality}}</span></h3>
+        <h4 style="margin-bottom:40px">{{database.riding_catagory}}</h4>
+        <p id="gender"><span>Gender: </span> {{database.gender}}</p>
+        <p id="date_of_birth"><span>Date Of Birth:</span> {{database.date_of_birth}}</p>
+        <p id="occupation"><span>Occupation:</span> {{database.occupation}}</p>
+        <p id="previous_mtb_participation"><span>Previous MTB Himalaya Participation:</span> {{database.previous_mtb_participation}}</p>
+
+        <p id="bike"><span>Bike: </span> {{database.bike}}</p>
+        <p id="biking_style"><span>Biking Style: </span> {{database.biking_style}}</p>
+        <p id="riding_experience"><span>Riding Experience: </span> {{2017-database.riding_experience}} years</p>
+        <p id="personal_favourite"><span>Personal Favourite: </span> {{database.personal_favourite}}</p>
+        <p id="personal_best_1"><span>Personal Best: </span> {{database.personal_best_1}}</p>
+
+
+        <p id="major_sponsor"><span>Major Sponsor: </span> {{database.major_sponsor}}</p>
+      </div>
+    </div>
   </div>
 </div>

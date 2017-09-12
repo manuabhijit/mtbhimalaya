@@ -1,5 +1,5 @@
 
-#stage_message_1, #stage_message_2{
+#stage_message_1, #stage_message_2, #stage_message_1_cumulative{
   font-weight: bold;
   display: none
 }

@@ -1,3 +1,11 @@
 .portfolio-area{
     margin-bottom: 100px
 }
+
+.small_gallery .single-portfolio h4 a{
+  font-size: 100%
+}
+
+.small_gallery .single-portfolio h4 a:hover{
+  color:white;
+}

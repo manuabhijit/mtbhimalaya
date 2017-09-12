@@ -1,0 +1,64 @@
+<!--Banner Area Start-->
+<div class="banner-area-profile list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title title-three text-center">
+                    <div class="title-border" style="padding-bottom:30px">
+                        <h1 style="color:#00c0ff">See who is riding, <span>this year</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="breadcrumb three">
+                    <li><a>Home</a></li>
+                    <li>Profile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-information-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center" >
+                    <div class="title-border">
+                        <h1>Rider <span>Listing</span></h1>
+                    </div>
+                    <div class="col-sm-12 table-responsive" style="padding-top:20px">
+                      <table class="table">
+                        <tr>
+                          <th>Rider Name</th>
+                          <th>Category</th>
+                          <th>Nationality</th>
+                          <th>Share</th>
+                          <th>Download</th>
+                        </tr>
+                        <tr *ngFor="let rider of riders">
+                          <td><a routerLink="{{rider.uid}}"><img class="profile_icon" src="assets\img\profile_pics\icon\{{rider.uid}}.jpg" height="65px" style="">{{rider.full_name}}</a></td>
+                          <td>{{rider.riding_catagory}}</td>
+                          <td><img src="http://www.mtbhimalaya.com/assets/img/flags/{{rider.nationality}}.png" alt="flag" height="20px" style="width: 42px;padding-right: 10px;">{{rider.nationality}}</td>
+                          <td><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.mtbhimalaya.com/profile/{{rider.uid}}" target="_blank" style="margin-right:10px">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://twitter.com/share?url=http://www.mtbhimalaya.com/profile/{{rider.uid}}" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                              </a>
+                          </td>
+                          <td><a href="" download="{{rider.full_name}}_{{rider.uid}}.png" href="assets\img\profile_pics\craft\{{rider.uid}}.png" title="{{rider.full_name}} | Profile card">
+                                <i class="fa fa-download" aria-hidden="true"></i>
+                              </a>
+                          </td>
+                        </tr>
+                      </table>
+                      <h2>More Rider Profiles launchng soon</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

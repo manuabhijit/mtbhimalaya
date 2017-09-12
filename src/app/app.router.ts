@@ -16,7 +16,9 @@ import { TravelGuideComponent } from './travel-guide/travel-guide.component'
 import { PhysioComponent } from './physio/physio.component'
 import { PreviousResultsComponent } from './previous-results/previous-results.component'
 import { HospitalityComponent } from './hospitality/hospitality.component'
-import { LiveResultsComponent } from './live-results/live-results.component';
+import { LiveResultsComponent } from './live-results/live-results.component'
+import { ProfileCardsComponent } from './profile-cards/profile-cards.component'
+import { ProfileListingComponent } from './profile-listing/profile-listing.component'
 
 
 export const router: Routes= [
@@ -100,6 +102,16 @@ export const router: Routes= [
       }
     },
     {path: 'register', redirectTo: 'chat'},
+    {path: 'profile/:id', component:ProfileCardsComponent, data: {
+        title: 'Rider Profile | Hero MTB Himalaya : The 13th Edition',
+        metaDescription: ""
+      }
+    },
+    {path: 'profile', component:ProfileListingComponent, data: {
+        title: 'Rider Profile | Hero MTB Himalaya : The 13th Edition',
+        metaDescription: "Register for the Hero MTB Himalaya, the 13th edition."
+      }
+    },
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
 
 ]

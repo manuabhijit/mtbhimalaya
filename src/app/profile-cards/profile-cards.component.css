@@ -1,0 +1,74 @@
+.containerProfile {
+  position:relative;
+
+}
+
+.imgA1 { top: 0px; left: 0px; z-index: 0; }
+.imgB1 {position:absolute; top: 0px; left: 0px; z-index: -1; }
+.imgC1text {
+  position:absolute;
+  bottom:  23%;
+  left: 15px;
+  z-index: 1;
+  color: #FFF;
+}
+
+.imgDtext{
+  position:absolute;
+  bottom:  10%;
+  left: 15px;
+  z-index: 1;
+  color: #FFF;
+}
+
+.img_personal_favourite{
+  letter-spacing:2px;
+  font-size: 60%
+}
+
+.img_riding_experience{
+  letter-spacing:2px;
+  font-size: 60%
+}
+
+.img_personal_best_1{
+  letter-spacing:2px;
+  font-size: 60%
+}
+
+.name{
+  font-size: 250%;
+  margin-bottom: -0px;
+}
+
+.cat{
+  margin-top: 0px;
+  font-size: 60%;
+  padding-left: 2px;
+  letter-spacing:2px;
+}
+
+.rider_profile_data{
+  padding-top: 20px
+}
+
+.rider_profile_data p span{
+  font-weight: bold;
+
+}
+
+.rider_profile_data p{
+  padding-left: 15px;
+  text-transform: capitalize;
+  margin-bottom: 20px
+}
+
+.rider_profile_data h3{
+  letter-spacing: 2px;
+}
+
+.rider_profile_data h3 span{
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px;
+}

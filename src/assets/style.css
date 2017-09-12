@@ -2549,6 +2549,19 @@ header.header-three {top: 10px}
     transform: rotate(180deg);
 }
 
+.banner-area-profile.list {
+    background: rgba(0, 0, 0, 0) url("img/banner/banner-profile.jpg") no-repeat scroll center top / cover;
+    padding-bottom: 149px;
+    padding-top: 244px;
+}
+
+.banner-area-profile.list::after {
+    background: rgba(0, 0, 0, 0) url("img/banner/transparent-3.png") no-repeat scroll center top / cover ;
+    height: 45px;
+    transform: rotate(180deg);
+}
+
+
 .banner-area-rider-reg.list {
     background: rgba(0, 0, 0, 0) url("img/banner/banner-rider-reg.jpg") no-repeat scroll center top / cover;
     padding-bottom: 149px;
@@ -2634,6 +2647,8 @@ header.header-three {top: 10px}
     background: #ffe52d none repeat scroll 0 0;
 }
 
+
+
 .banner-area-contact.list .section-title h1 {font-size: 40px}
 .banner-area-contact.list .section-title h1 span {color: #ffffff}
 .banner-area-contact.list .section-title h1::before, .banner-area.list .section-title h1::after {
@@ -2658,6 +2673,11 @@ header.header-three {top: 10px}
     background: #ffe52d none repeat scroll 0 0;
 }
 
+.banner-area-profile.list .section-title h1 {font-size: 40px}
+.banner-area-profile.list .section-title h1 span {color: #ffffff}
+.banner-area-profile.list .section-title h1::before, .banner-area.list .section-title h1::after {
+    background: #ffe52d none repeat scroll 0 0;
+}
 .banner-area-physio.list .section-title h1 {font-size: 40px}
 .banner-area-physio.list .section-title h1 span {color: #ffffff}
 .banner-area-physio.list .section-title h1::before, .banner-area.list .section-title h1::after {
@@ -3953,4 +3973,56 @@ textarea.yourmessage {
 }
 #scrollUp:hover {
     background-color: #000;
+}
+
+
+/* Mobile navigation */
+.mobile-breadcrum-container{
+  margin-top: 10px;
+  display: inline-block;
+  background-color: black;
+  border-right: 4px solid #00c0ff;
+  transform: skewX(30deg);
+}
+.mobile-breadcrum-row{
+    transform: skewX(-30deg);
+}
+
+.mobile-breadcrum {
+  margin: 0px;
+  padding: 7px;
+  margin-left: 10px;
+  font-size: 20px;
+  animation: mobile-nav 1s;
+
+}
+.mobile-breadcrum li {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+}
+.mobile-breadcrum li a{
+  display: inline-block;
+  vertical-align: middle;
+  color: #00c0ff;
+}
+.mobile-breadcrum li:after {
+  content: "|";
+  color: white;
+  font-size: 29px;
+  margin: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mobile-breadcrum li:last-of-type:after {
+  content: "";
+}
+
+@keyframes mobile-nav {
+  from{
+    transform: translateX(-100px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }

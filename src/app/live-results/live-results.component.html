@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-sm-12 table-responsive container" style="padding-top:20px">
-              <table class="table">
+              <table class="table table_day">
                 <tr>
                   <th id="rank">Rank</th>
                   <th>Jersey Number</th>
@@ -57,14 +57,52 @@
                   <th>Start Time</th>
                   <th>End Time</th>
                   <th>Penalty</th>
-                  <th>Difference</th>
-                  <th>Final Time</th>
+                  <th>Time Taken
+                  </th>
+                  <th>Stage Time</th>
                   <th class="team_final">Team Time</th>
                 </tr>
               </table>
               <p id="stage_message_1" class="text-center">Stage not yet started.</p>
               <p id="stage_message_2" class="text-center">No results available yet</p>
             </div>
+        </div>
+        <div class="row" style="padding-top:50px">
+          <div class="col-md-12">
+              <div class="section-title text-center" >
+                  <div class="title-border">
+                      <h1>Cumulative <span>Results</span></h1>
+                  </div>
+                  <p></p>
+              </div>
+          </div>
+          <div class="col-sm-12">
+              <div class="col-sm-5">
+                <select class="form-control" id="stage_cumulative">
+                    <option *ngFor="let stage of stages" value="{{stage.STAGE}}">{{stage.Name}}</option>
+                </select>
+              </div>
+              <div class="col-sm-5">
+                <select class="form-control" id="category_cumulative">
+                    <option *ngFor="let cat of category" value="{{cat.name}}">{{cat.name}}</option>
+                </select>
+              </div>
+              <div class="col-sm-2">
+                <button type="button" id="refresh_cumulative" class="btn btn-info refresh">Refresh</button>
+              </div>
+          </div>
+          <div class="col-sm-12 table-responsive container" style="padding-top:20px">
+            <table class="table table_cumulative">
+              <tr>
+                <th id="rank_cumulative">Rank</th>
+                <th>Jersey Number</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th *ngFor="let stage of stages" class="cum_{{stage.STAGE}}">Stage {{stage.STAGE}}</th>
+              </tr>
+            </table>
+            <p id="stage_message_1_cumulative" class="text-center">Stage results are not yet processed.</p>
+          </div>
         </div>
     </div>
 </div>

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutRaceComponent implements OnInit {
 
+    breadcrum = "Race";
+
     hero_team  = [
         {
            name : "Devender Thakur",

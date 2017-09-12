@@ -45,6 +45,16 @@ export class RiderRegistrationComponent implements OnInit {
 
     }
 
+    pay_now(){
+      let url = 'http://hastpa.org/testing/hastpa_api/make_payment.php?email='+this.email+'&name='+this.database.full_name;
+      let formData = new FormData();
+      formData.append('email',this.email);
+
+      this._exampleService.someMethod(url,formData).subscribe(result =>{
+          console.log("mail sent");
+      });
+    }
+
     auto_nation(){
         this.database.nationality=this.database.address_country;
     }
@@ -95,9 +105,6 @@ export class RiderRegistrationComponent implements OnInit {
 
             console.log(result);
 
-
-
-
        });
     }
 
@@ -117,11 +124,14 @@ export class RiderRegistrationComponent implements OnInit {
         if(isValid){
             this.put_data_primary();
             console.log(data);
-            alert("Please Complete your form.");
+            this.pay_now();
+            //alert("Please Complete your form.");
             this.router.navigate(['home/']);
         }
-        else
-            alert("Make sure the form has no RED marks");
+        else{
+          alert("Make sure the form has no RED marks");
+        }
+
     };
 
 

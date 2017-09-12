@@ -35,6 +35,7 @@ import { Results2016Component } from './previous-results/results2016/results2016
 import { Results2015Component } from './previous-results/results2015/results2015.component';
 import { HospitalityComponent } from './hospitality/hospitality.component';
 import { LiveResultsComponent } from './live-results/live-results.component';
+import { ProfileListingComponent } from './profile-listing/profile-listing.component';
 
 
 
@@ -69,7 +70,8 @@ import { LiveResultsComponent } from './live-results/live-results.component';
     Results2016Component,
     Results2015Component,
     HospitalityComponent,
-    LiveResultsComponent
+    LiveResultsComponent,
+    ProfileListingComponent
   ],
   imports: [
     BrowserAnimationsModule,

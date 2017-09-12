@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stages.component.css']
 })
 export class StagesComponent implements OnInit {
+  breadcrum ="STAGES";
     stages = [
         {
             "STAGE": "1",
