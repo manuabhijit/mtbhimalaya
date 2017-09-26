@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./previous-results.component.css']
 })
 export class PreviousResultsComponent implements OnInit {
-
+  breadcrum="Race Results";
   constructor() { }
 
   ngOnInit() {

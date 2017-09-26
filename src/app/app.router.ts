@@ -19,6 +19,7 @@ import { HospitalityComponent } from './hospitality/hospitality.component'
 import { LiveResultsComponent } from './live-results/live-results.component'
 import { ProfileCardsComponent } from './profile-cards/profile-cards.component'
 import { ProfileListingComponent } from './profile-listing/profile-listing.component'
+import { PicToGoComponent } from './pic-to-go/pic-to-go.component'
 
 
 export const router: Routes= [
@@ -48,7 +49,7 @@ export const router: Routes= [
     },
     {path: 'tnc', component: TermsAndConditionsComponent, data: {
         title: 'Terms and Condition | Hero MTB Himalaya : The 13th Edition',
-        metaDescription: ""
+        metaDescription: "Rules and regulations will give an riders or HASTPA guidelines to follow when entering into a MTB premium contest."
       }
     },
     {path: 'register/:email', component:RiderRegistrationComponent, data: {
@@ -67,6 +68,11 @@ export const router: Routes= [
       }
     },
     {path: 'gallery', component:GalleryComponent, data: {
+        title: 'Gallery | Hero MTB Himalaya : The 13th Edition',
+        metaDescription: "Looking back, we have a lot of great memories."
+      }
+    },
+    {path: 'photos', component:GalleryComponent, data: {
         title: 'Gallery | Hero MTB Himalaya : The 13th Edition',
         metaDescription: "Looking back, we have a lot of great memories."
       }
@@ -98,7 +104,7 @@ export const router: Routes= [
     },
     {path: 'live', component:LiveResultsComponent, data: {
         title: 'Live Results | Hero MTB Himalaya : The 13th Edition',
-        metaDescription: ""
+        metaDescription: "Stay tuned and CATCH THE ACTION LIVE!"
       }
     },
     {path: 'register', redirectTo: 'chat'},
@@ -112,6 +118,14 @@ export const router: Routes= [
         metaDescription: "Register for the Hero MTB Himalaya, the 13th edition."
       }
     },
+    {path: 'fbintegrator', component:PicToGoComponent, data: {
+        title: 'Pic2Go Integrator | Hero MTB Himalaya : The 13th Edition',
+        metaDescription: "Integate your facebook account with for the Hero MTB Himalaya via Pic2Go."
+      }
+    },
+    {path: 'registration-details', redirectTo: 'chat'},
+    {path: 'about-mtb-himalaya-2017', redirectTo: 'race'},
+    {path: 'route-map', redirectTo: 'stages'},
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
 
 ]

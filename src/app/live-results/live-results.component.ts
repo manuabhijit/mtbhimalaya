@@ -10,7 +10,8 @@ import $ from 'jquery';
 })
 export class LiveResultsComponent implements OnInit {
 
-    breadcrum="Live";
+    breadcrum="Results";
+
   constructor(private _exampleService: MyServiceClass) { }
     stages = [
         {
@@ -43,7 +44,7 @@ export class LiveResultsComponent implements OnInit {
         },
         {
             "STAGE": "8",
-            "Name": "Land of the Lambs"
+            "Name": "Land of the Lamas"
           }
       ];
 
@@ -76,7 +77,8 @@ export class LiveResultsComponent implements OnInit {
 
     get_rank_data(){
       $('.team_final').fadeOut("fast");
-      $('#rank').text('Rank');
+      $('.team_not_final').fadeIn("fast");
+
       $('#stage_message_1, #stage_message_2').fadeOut('fast');
       var that = this;
       var stage = $('#stage').val();
@@ -86,6 +88,7 @@ export class LiveResultsComponent implements OnInit {
       let url = 'http://www.hastpa.org/testing/hastpa_api/timing_api/get_rank.php?stage='+stage+'&category='+category;
       let formData = new FormData();
       formData.append('no_data','');
+
       this._exampleService.someMethod(url,formData).subscribe(result =>{
          //console.log("data",result);
          if(result=="Stage not yet started") {
@@ -100,11 +103,11 @@ export class LiveResultsComponent implements OnInit {
            }
          }
          else{
-           $('#rank').text('Serial No.');
-           $('.team_final').fadeIn("slow");
+           $('.team_final').fadeIn("fast");
+           $('.team_not_final').fadeOut("fast");
            for(i=1;i<100;i++){
                if(result[i]==undefined) break;
-               $('.table_day tbody').append('<tr class="table_row"> <td> <img src="'+result[i].app_flag+'" alt="flag" height="20px" style="width: 42px;padding-right: 10px;">'+i+'</td> <td>'+result[i].jersey_number+'</td><td>'+result[i].full_name+'</td><td>'+result[i].category+'</td><td>'+result[i].start_time+'</td> <td>'+result[i].end_time+'</td><td>'+result[i].penalty+'</td> <td>'+result[i].difference+'</td><td>'+result[i].final_time+'</td><td>'+result[i].team_time+'</td> </tr>');
+               $('.table_day tbody').append('<tr class="table_row"> <td>'+i+'</td> <td>'+result[i].team_number+'</td> <td>'+result[i].team_name+'</td> <td>Team of Two</td> <td>'+result[i].start_time+'</td> <td>'+result[i].end_time+'</td> <td>'+result[i].difference+'</td> <td>'+result[i].final_time+'</td></tr>');
            }
          }
 

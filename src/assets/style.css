@@ -2610,6 +2610,30 @@ header.header-three {top: 10px}
     transform: rotate(180deg);
 }
 
+.banner-area-live.list {
+    background: rgba(0, 0, 0, 0) url("img/banner/banner-live.jpg") no-repeat scroll center top / cover;
+    padding-bottom: 149px;
+    padding-top: 244px;
+}
+
+.banner-area-live.list::after {
+    background: rgba(0, 0, 0, 0) url("img/banner/transparent-3.png") no-repeat scroll center top / cover ;
+    height: 45px;
+    transform: rotate(180deg);
+}
+
+.banner-area-pic2go.list {
+    background: rgba(0, 0, 0, 0) url("img/banner/banner-pic2go.jpg") no-repeat scroll center top / cover;
+    padding-bottom: 149px;
+    padding-top: 244px;
+}
+
+.banner-area-pic2go.list::after {
+    background: rgba(0, 0, 0, 0) url("img/banner/transparent-3.png") no-repeat scroll center top / cover ;
+    height: 45px;
+    transform: rotate(180deg);
+}
+
 .banner-area-race.list {
     background: rgba(0, 0, 0, 0) url("img/banner/banner-race.jpg") no-repeat scroll center top / cover;
     padding-bottom: 149px;
@@ -2681,6 +2705,16 @@ header.header-three {top: 10px}
 .banner-area-physio.list .section-title h1 {font-size: 40px}
 .banner-area-physio.list .section-title h1 span {color: #ffffff}
 .banner-area-physio.list .section-title h1::before, .banner-area.list .section-title h1::after {
+    background: #ffe52d none repeat scroll 0 0;
+}
+.banner-area-live.list .section-title h1 {font-size: 40px}
+.banner-area-live.list .section-title h1 span {color: #ffffff}
+.banner-area-live.list .section-title h1::before, .banner-area.list .section-title h1::after {
+    background: #ffe52d none repeat scroll 0 0;
+}
+.banner-area-pic2go.list .section-title h1 {font-size: 40px}
+.banner-area-pic2go.list .section-title h1 span {color: #ffffff}
+.banner-area-pic2go.list .section-title h1::before, .banner-area.list .section-title h1::after {
     background: #ffe52d none repeat scroll 0 0;
 }
 

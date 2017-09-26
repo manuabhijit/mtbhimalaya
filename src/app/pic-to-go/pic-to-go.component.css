@@ -1,0 +1,18 @@
+.details_of_pic2go{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.pic2go_img{
+  border: 1px solid black;
+  border-radius: 8px
+}
+
+.pic2go_text{
+  text-align: center;
+  font-size: 16px;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 2px;
+}
