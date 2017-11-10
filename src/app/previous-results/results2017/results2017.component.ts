@@ -7,9 +7,9 @@ import { MyServiceClass } from '../../app.services';
 })
 export class Results2017Component implements OnInit {
 
-  constructor() { }
+  constructor(private _exampleService: MyServiceClass) { }
 
-  ngOnInit(private _exampleService: MyServiceClass) {
+  ngOnInit() {
   }
 
 
@@ -22,7 +22,7 @@ export class Results2017Component implements OnInit {
 
     this._exampleService.someMethod(url,formData).subscribe(result =>{
       console.log(result);
-    }
+    });
 
   }
 
